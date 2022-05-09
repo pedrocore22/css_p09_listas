@@ -1,0 +1,47 @@
+ul {
+    list-style: none;
+}
+
+li {
+    font-size: 20px;
+    color: grey;
+}
+/* Usamos el pseudoelemento before para generar nosotros
+la viñeta */
+li::before {
+    content: '\2022';
+    font-size: 28px;
+    color: crimson;
+    position: relative;
+    top: 3px;
+    right: 6px;
+}
+
+ul.vader li::before {
+    content: url('../img/icons8-darth-vader.svg');
+    position: relative;
+    top: 6px;
+    right: 6px;
+}
+
+/* Pseudoclases para elementos repetitivos */
+
+/* li:first-child {
+    color: orange;
+}
+
+li:last-child {
+    color: violet;
+}
+
+li:nth-child(3) {
+    color: brown;
+} */
+
+li:nth-child(odd) {
+    color: violet;
+}
+
+li:nth-child(even) {
+    color: green;
+}
